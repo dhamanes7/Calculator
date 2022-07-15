@@ -58,13 +58,27 @@ class ViewController: UIViewController {
          }
         else if enteredInput.contains("^2"){
             enteredInput.removeLast(2)
-            if(enteredInput.contains("%") || enteredInput.contains("!") || enteredInput.contains("√") || enteredInput.contains("3√") || enteredInput.contains("π") || enteredInput.contains("+") || enteredInput.contains("-") || enteredInput.contains("*") || enteredInput.contains("/")){
+            if(enteredInput.contains("%") || enteredInput.contains("!") || enteredInput.contains("√") || enteredInput.contains("3√") || enteredInput.contains("^3") || enteredInput.contains("+") || enteredInput.contains("-") || enteredInput.contains("*") || enteredInput.contains("/")){
                    output.text = "Enter no only"
                           
                            
             }else{
                 let number:Int = Int(enteredInput)!
                 let square:Int = number*number
+                output.text = String(square)
+                
+                
+        }
+        
+        }else if enteredInput.contains("^3"){
+            enteredInput.removeLast(2)
+            if(enteredInput.contains("%") || enteredInput.contains("!") || enteredInput.contains("√") || enteredInput.contains("3√") || enteredInput.contains("^2") || enteredInput.contains("+") || enteredInput.contains("-") || enteredInput.contains("*") || enteredInput.contains("/")){
+                   output.text = "Enter no only"
+                          
+                           
+            }else{
+                let number:Int = Int(enteredInput)!
+                let square:Int = number*number*number
                 output.text = String(square)
                 
                 
@@ -131,8 +145,9 @@ class ViewController: UIViewController {
         addInput(value: "^2")
     }
     
-    @IBAction func pie(_ sender: Any) {
-        addInput(value: "π")
+    
+    @IBAction func cube(_ sender: Any) {
+        addInput(value: "^3")
     }
     
     
