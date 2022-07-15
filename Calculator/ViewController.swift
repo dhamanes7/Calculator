@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         }
         else if enteredInput.contains("3√"){
             var x: Double = 0   // number storage
-            enteredInput.removeFirst(2)
+            enteredInput.dropFirst(2)
             let answer: String = equationCalc(equation: enteredInput)
             if (answer == "Special char"){
                 output.text = "Special Char"
