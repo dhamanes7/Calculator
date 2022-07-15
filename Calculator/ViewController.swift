@@ -84,6 +84,29 @@ class ViewController: UIViewController {
                 
         }
         
+        }else if enteredInput.contains("!"){
+            enteredInput.removeLast(1)
+            if(enteredInput.contains("%") || enteredInput.contains("^3") || enteredInput.contains("√") || enteredInput.contains("3√") || enteredInput.contains("^2") || enteredInput.contains("+") || enteredInput.contains("-") || enteredInput.contains("*") || enteredInput.contains("/")){
+                   output.text = "Enter no only"
+                          
+                           
+            }else{
+                let number:Int = Int(enteredInput)!
+                var factorial:Int = 1
+                if (number == 0){
+                    
+                }else if (number == 1){
+                    
+                }else{
+                for item in 1...number {
+                    factorial = factorial * item
+                }
+                }
+                output.text = String(factorial)
+                
+                
+        }
+        
         }else{
             output.text = equationCalc(equation: enteredInput)
         }

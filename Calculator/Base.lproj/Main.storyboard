@@ -296,8 +296,6 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="addFactorial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jKW-Pg-clI"/>
-                                                    <action selector="addZero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GlK-Qg-bfb"/>
-                                                    <action selector="zero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QNs-aL-gAM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w41-6J-6Sk">
@@ -320,7 +318,6 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="addZero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k5j-qX-urn"/>
-                                                    <action selector="factorial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZPK-eD-KrX"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuQ-De-pcH">
