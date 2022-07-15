@@ -37,21 +37,41 @@ class ViewController: UIViewController {
             var x: Double = 0   // number storage
             enteredInput.removeFirst()
             let answer: String = equationCalc(equation: enteredInput)
+            if (answer == "Special char"){
+                output.text = "Special Char"
+            }else{
             x = Double(answer)!
             output.text = String(sqrt(x))
+            }
            
-            
         }
         else if enteredInput.contains("3√"){
             var x: Double = 0   // number storage
-            enteredInput.removeFirst()
+            enteredInput.removeFirst(2)
             let answer: String = equationCalc(equation: enteredInput)
-            if 
+            if (answer == "Special char"){
+                output.text = "Special Char"
+            }else{
             x = Double(answer)!
             output.text = String(cbrt(x))
+            }
          }
-        else {
-            
+        else if enteredInput.contains("^2"){
+            enteredInput.removeLast(2)
+            if(enteredInput.contains("%") || enteredInput.contains("!") || enteredInput.contains("√") || enteredInput.contains("3√") || enteredInput.contains("π") || enteredInput.contains("+") || enteredInput.contains("-") || enteredInput.contains("*") || enteredInput.contains("/")){
+                   output.text = "Enter no only"
+                          
+                           
+            }else{
+                let number:Int = Int(enteredInput)!
+                let square:Int = number*number
+                output.text = String(square)
+                
+                
+        }
+        
+        }else{
+            output.text = equationCalc(equation: enteredInput)
         }
         
     }
